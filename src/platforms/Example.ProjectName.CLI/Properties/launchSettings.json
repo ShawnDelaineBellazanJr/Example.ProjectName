@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Example.ProjectName.CLI": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
