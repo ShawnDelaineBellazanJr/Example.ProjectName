@@ -1,0 +1,92 @@
+- name: Overview
+  href: index.md
+- name: Architecture
+  href: architecture/
+  items:
+  - name: System Overview
+    href: architecture/overview.md
+  - name: PMCRO Loop
+    href: architecture/pmcro-loop.md
+  - name: Recursive Architecture Overview
+    href: architecture/recursive-architecture-overview.md
+  - name: Planar Analysis
+    href: architecture/planar-analysis.md
+  - name: Strange Loops
+    href: architecture/strange-loops.md
+- name: Agent Framework
+  href: agents/
+  items:
+  - name: ChatCompletion Agents
+    href: agents/chatcompletion-agents.md
+  - name: SK Agent Framework
+    href: agents/agent-framework.md
+  - name: Agent Orchestration
+    href: agents/orchestration.md
+  - name: Multi-Intelligence
+    href: agents/multi-intelligence.md
+  - name: Thought Transfer
+    href: agents/thought-transfer.md
+- name: Process Framework
+  href: process/
+  items:
+  - name: YAML Workflows
+    href: process/yaml-workflows.md
+  - name: Feedback Loop
+    href: process/feedback-loop.md
+  - name: Thought Transfer Envelope
+    href: process/thought-transfer-envelope.md
+  - name: Process Steps
+    href: process/process-steps.md
+  - name: Event Orchestration
+    href: process/event-orchestration.md
+  - name: Declarative Agents
+    href: process/declarative-agents.md
+- name: Capability System
+  href: capabilities/
+  items:
+  - name: Intent Analysis
+    href: capabilities/intent-analysis.md
+  - name: Emergent Generation
+    href: capabilities/emergent-generation.md
+  - name: Runtime Evolution
+    href: capabilities/runtime-evolution.md
+  - name: Self-Reference
+    href: capabilities/self-reference.md
+- name: Integration
+  href: integration/
+  items:
+  - name: Prompty Templates
+    href: integration/prompty-templates.md
+  - name: MCP Servers
+    href: integration/mcp-servers.md
+  - name: Semantic Kernel
+    href: integration/semantic-kernel.md
+  - name: VS Code Extension
+    href: integration/vscode-extension.md
+- name: Development
+  href: development/
+  items:
+  - name: Getting Started
+    href: development/getting-started.md
+  - name: Create from Template
+    href: development/create-from-template.md
+  - name: Behavior Intent Programming
+    href: development/behavior-intent.md
+  - name: Plugin Development
+    href: development/plugin-development.md
+  - name: Testing Patterns
+    href: development/testing-patterns.md
+- name: Examples
+  href: examples/
+  items:
+  - name: Basic PMCRO
+    href: examples/basic-pmcro.md
+  - name: Agent Coordination
+    href: examples/agent-coordination.md
+  - name: Workflow Evolution
+    href: examples/workflow-evolution.md
+  - name: Capability Spawning
+    href: examples/capability-spawning.md
+- name: API Reference
+  href: api/
+  homepage: api/index.md

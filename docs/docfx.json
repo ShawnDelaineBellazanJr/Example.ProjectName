@@ -1,0 +1,54 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["**/*.cs"],
+          "src": "../src"
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "api/index.md"]
+      },
+      {
+        "files": ["**.md", "**/toc.yml"],
+        "exclude": ["_site/**"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/**"]
+      }
+    ],
+    "output": "_site",
+    "globalMetadata": {
+      "_appName": "Autonomous Development System",
+      "_appTitle": "Autonomous Development System",
+      "_enableSearch": true,
+      "_appFooter": "© 2025 Autonomous Development System. Built with behavior intent programming and emergent capabilities.",
+      "_gitContribute": {
+        "repo": "https://github.com/yourusername/AutonomousDevelopmentSystem",
+        "branch": "main"
+      }
+    },
+    "fileMetadata": {
+      "_tocTitle": {
+        "api/": "API Documentation"
+      }
+    },
+    "template": [
+      "default",
+      "modern"
+    ],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false
+  }
+}

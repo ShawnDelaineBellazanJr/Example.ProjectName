@@ -1,0 +1,91 @@
+workflow:
+  id: SamplePMCRO
+  description: Minimal PMCRO demonstration workflow
+  inputs:
+    events:
+      cloud_events:
+        - type: behavior_intent_received
+          data_schema:
+            type: object
+  nodes:
+    - id: Plan
+      type: declarative
+      agent:
+        type: chat_completion_agent
+        name: Planner
+        instructions: "Decompose intent into steps"
+      on_complete:
+        - on_condition:
+            type: default
+            emits:
+              - event_type: Planning.Complete
+    - id: Make
+      type: declarative
+      agent:
+        type: chat_completion_agent
+        name: Maker
+        instructions: "Execute planned steps"
+      on_complete:
+        - on_condition:
+            type: default
+            emits:
+              - event_type: Execution.Complete
+    - id: Check
+      type: declarative
+      agent:
+        type: chat_completion_agent
+        name: Checker
+        instructions: "Validate outputs"
+      on_complete:
+        - on_condition:
+            type: default
+            emits:
+              - event_type: Validation.Complete
+    - id: Reflect
+      type: declarative
+      agent:
+        type: chat_completion_agent
+        name: Reflector
+        instructions: "Generate meta-learning"
+      on_complete:
+        - on_condition:
+            type: default
+            emits:
+              - event_type: Reflection.Complete
+    - id: Optimize
+      type: declarative
+      agent:
+        type: chat_completion_agent
+        name: Optimizer
+        instructions: "Apply enhancements for next cycle"
+      on_complete:
+        - on_condition:
+            type: default
+            emits:
+              - event_type: Optimization.Complete
+  orchestration:
+    - listen_for:
+        event: behavior_intent_received
+        from: _workflow_
+      then:
+        - node: Plan
+    - listen_for:
+        event: Planning.Complete
+        from: Plan
+      then:
+        - node: Make
+    - listen_for:
+        event: Execution.Complete
+        from: Make
+      then:
+        - node: Check
+    - listen_for:
+        event: Validation.Complete
+        from: Check
+      then:
+        - node: Reflect
+    - listen_for:
+        event: Reflection.Complete
+        from: Reflect
+      then:
+        - node: Optimize
